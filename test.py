@@ -1,16 +1,19 @@
-from statistics.popularity_measures import WilsonScoreInterval
+import time
 
+from random import randint
+from statistics.popularity_measures import wilson_score
+from statistics.rank_correlation import spearman_correlation
 
-wsi = WilsonScoreInterval(20671, 815)  # El Pulso de la Republica
+# Wilson Score Interval
 
-upper, lower = wsi.calculate()
-
-print lower
-
+# El Pulso de la Republica
+print wilson_score(20671, 815)
 print '------------'
+# Chumel con Chumel Torres
+print wilson_score(11424, 534)
 
-wsi = WilsonScoreInterval(11424, 534)  # Chumel con Chumel Torres
+# Spearman
+eng = [randint(1, 100) for _ in range(1000)]
+math = [randint(1, 100) for _ in range(1000)]
 
-upper, lower = wsi.calculate()
-
-print lower
+print spearman_correlation(eng, math)

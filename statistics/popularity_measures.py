@@ -13,8 +13,7 @@ def wilson_score(ns, nf, z=1.96):
     factor = 1/(n + z_sq)
     root = n_root((ns * nf/n) + (z_sq/4), z)
 
-    u_wsi = factor * (ns + (z_sq/2) + root)
     l_wsi = factor * (ns + (z_sq/2) - root)
+    u_wsi = factor * (ns + (z_sq/2) + root)
 
-    return u_wsi, l_wsi
-
+    return l_wsi, u_wsi

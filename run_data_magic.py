@@ -12,14 +12,17 @@ da = DataAnalysis(candidates)
 # candidates
 candidates = db.candidates
 candidates_data = da.candidate_profile()
-candidates.insert_one(candidates_data)
+candidates.delete_many({})
+candidates.insert_many(candidates_data)
 
 # weeks
 weeks = db.weeks
 weeks_data = da.tweet_score()
-weeks.insert_one(candidates_data)
+weeks.delete_many({})
+weeks.insert_one(weeks_data)
 
 # places
 places = db.places
 places_data = da.voter_score()
-places.insert_one(candidates_data)
+places.delete_many({})
+places.insert_many(places_data)

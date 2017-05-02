@@ -200,7 +200,6 @@ class DataAnalysis:
         for i in range(len(WEEKS) - 1):
             date, undecided, week_result = self.weekly_voter_score(i+1)
             results.append({'date': date})
-            print week_result
             for index, data in enumerate(week_result):
                 results[i][data[0]] = index + 1
             results[i]['undecided'] = undecided

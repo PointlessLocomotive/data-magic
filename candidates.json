@@ -1,0 +1,52 @@
+[
+    {
+        "banner": "https://pbs.twimg.com/profile_banners/583488712/1493669618/1500x500",
+        "profile": "https://pbs.twimg.com/profile_images/851092999316451328/iDh9IXJE_400x400.jpg",
+        "wikipedia": "https://es.wikipedia.org/wiki/Juan_Zepeda",
+        "user_id": "583488712",
+        "screen_name": "@JuanZepeda_",
+        "political_party": "PRD",
+        "political_orientation": "Izquierda",
+        "key_words": [ "Juan Manuel Zepeda Hernández", "JMZH", "@JuanZepeda_", "#JuanSiPuede"]
+    },
+    {
+        "banner": "https://pbs.twimg.com/profile_banners/41421105/1493652261/1500x500",
+        "profile": "https://pbs.twimg.com/profile_images/848763390054907904/Sr8XPa7q.jpg",
+        "wikipedia": "https://es.wikipedia.org/wiki/Josefina_V%C3%A1zquez_Mota",
+        "user_id": "41421105",
+        "screen_name": "@JosefinaVM",
+        "political_party": "PAN",
+        "political_orientation": "Derecha",
+        "key_words": ["Josefina Vázquez Mota", "JVM", "@JosefinaVM", "#MásQueUnCambio"]
+    },
+    {
+        "banner": "https://pbs.twimg.com/profile_banners/3166004946/1491195663/1500x500",
+        "profile": "https://pbs.twimg.com/profile_images/848762298919288832/a0MeFuEo_400x400.jpg",
+        "wikipedia": "https://es.wikipedia.org/wiki/Delfina_G%C3%B3mez_%C3%81lvarez",
+        "user_id": "3166004946",
+        "screen_name": "@delfinagomeza",
+        "political_party": "MORENA",
+        "political_orientation": "Izquierda",
+        "key_words": ["Delfina Gómez Álvarez", "DGA", "@delfinagomeza", "#LaEsperanzaSeVota" ]
+    },
+    {
+        "banner": "https://pbs.twimg.com/profile_banners/198668037/1493468327/1500x500",
+        "profile": "https://pbs.twimg.com/profile_images/849474585397526528/B9toWSO5_400x400.jpg",
+        "wikipedia": "https://es.wikipedia.org/wiki/%C3%93scar_Gonz%C3%A1lez_Y%C3%A1%C3%B1ez",
+        "user_id": "198668037",
+        "screen_name": "@OscarGonzalezYa",
+        "political_party": "PT",
+        "political_orientation": "Izquierda",
+        "key_words": ["Óscar González Yañez", "OGY", "@OscarGonzalezYa", "#EstoyDeTuLado" ]
+    },
+    {
+        "banner": "https://pbs.twimg.com/profile_banners/39860797/1493599440/1500x500",
+        "profile": "https://pbs.twimg.com/profile_images/853360356059627520/s2_3VmaW.jpg",
+        "wikipedia": "https://es.wikipedia.org/wiki/Alfredo_del_Mazo_Maza",
+        "user_id": "39860797",
+        "screen_name": "@alfredodelmazo",
+        "political_party": "PRI",
+        "political_orientation": "Centro",
+        "key_words": ["Alfredo del Mazo Maza", "AMM", "@alfredodelmazo", "#FuerteYconTodo" ]
+    }
+]

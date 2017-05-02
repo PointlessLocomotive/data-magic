@@ -117,23 +117,24 @@ class DataAnalysis:
             else:
                 score = wilson_score(vote_count[i][0], vote_count[i][1])[0]
             results.append({
+                "candidate": self.candidates[i]['key_words'][0],
                 "party": self.candidates[i]['political_party'],
                 "score": score,
             })
         return results
 
     def tweet_score(self):
-        results = {
-            'PRI': list(),
-            'PAN': list(),
-            'PRD': list(),
-            'PT': list(),
-            'MORENA': list(),
-        }
+        results = [{
+            "candidate": '',
+            "party": '',
+            "data": list()
+        } for c in self.candidates]
         for i in range(len(WEEKS)-1):
             week_result = self.weekly_tweet_score(i+1)
-            for data in week_result:
-                results[data['party']].append(data['score'])
+            for index, data in enumerate(week_result):
+                results[index]["candidate"] = data['candidate']
+                results[index]["party"] = data['party']
+                results[index]["data"].append(data['score'])
         return results
 
     def weekly_voter_score(self, week_number):
@@ -193,15 +194,17 @@ class DataAnalysis:
                 party_count[-1] += 1
         places = zip(parties[:-1], party_count[:-1])
         places = sorted(places, key=lambda x: x[1], reverse=True)
-        return WEEKS[week_number][0], party_count[-1], places
+        user_count = len(vote_count.keys())
+        return WEEKS[week_number][0], party_count[-1], places, user_count
 
     def voter_score(self):
         results = list()
         for i in range(len(WEEKS) - 1):
-            date, undecided, week_result = self.weekly_voter_score(i+1)
+            date, undecided, week_result, count = self.weekly_voter_score(i+1)
             results.append({'date': date})
             for index, data in enumerate(week_result):
                 results[i][data[0]] = index + 1
             results[i]['undecided'] = undecided
+            results[i]['total-users'] = count
         return results
 
